@@ -84,30 +84,22 @@ st.markdown(
 
 
 
-image_path = r"C:\Users\sunim\coding fellas\streamlit\ok.jpg"
-def get_base64_image(image_path):
-    with open(image_path, "rb") as img_file:
-        base64_str = base64.b64encode(img_file.read()).decode()
-    return base64_str
 
-# 🌟 Apply background
-try:
-    img_base64 = get_base64_image(image_path)
-    background_image = f"""
-    <style>
-    [data-testid="stAppViewContainer"] {{
-        background-image: url("data:image/jpeg;base64,{img_base64}");
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed;
-    }}
-    </style>
-    """
-    st.markdown(background_image, unsafe_allow_html=True)
-except FileNotFoundError:
-    st.error(f"❌ Image not found at: {image_path}")
-except Exception as e:
-    st.error(f"⚠️ Error: {str(e)}")
+# Use the GitHub raw URL
+image_url = "https://raw.githubusercontent.com/AKHIL-THAPA-111/senkouryuu/main/ok.jpg"
+
+# Apply background image
+background_image = f"""
+<style>
+[data-testid="stAppViewContainer"] {{
+    background-image: url("{image_url}");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}}
+</style>
+"""
+st.markdown(background_image, unsafe_allow_html=True)
 
 
 
