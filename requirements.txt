@@ -1,0 +1,7 @@
+
+beautifulsoup4
+streamlit
+beautifulsoup4
+requests
+pandas
+
