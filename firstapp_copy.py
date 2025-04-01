@@ -12,23 +12,6 @@ from Head import *
 # 📌 Import Gemini API
 def set_dark_mode():
     st.set_page_config(layout="wide")
-    st.markdown(
-        """
-        <style>
-            body {
-                background-color: #0e1117;
-                color: white;
-            }
-            [data-testid="stAppViewContainer"] {
-                background-color: #0e1117;
-            }
-            [data-testid="stSidebar"] {
-                background-color: #161a23;
-            }
-        </style>
-        """,
-        unsafe_allow_html=True
-    )
 
 set_dark_mode()
 
