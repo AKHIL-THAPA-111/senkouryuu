@@ -10,6 +10,15 @@ import os
 import base64
 from Head import *
 # 📌 Import Gemini API
+st.markdown(
+    """
+    <style>
+    body { color: white; background-color: #0e1117; }
+    .stApp { max-width: 100% !important; }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 dance = "https://cdn.dribbble.com/userupload/20078936/file/original-190053e8da73440a535a4fc3d5b9d77a.gif"
 
