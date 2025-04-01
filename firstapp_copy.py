@@ -356,7 +356,7 @@ if st.session_state.data is not None:
 
     # Render images with a fixed width for consistency
     df['Image'] = df['Image_URL'].apply(
-        lambda url: f"<img src='{url}' width='5000000' height='200' />" if pd.notnull(url) else "N/A"
+        lambda url: f"<img src='{url}' width='50000' height='200' />" if pd.notnull(url) else "N/A"
     )
 
     # Filters
